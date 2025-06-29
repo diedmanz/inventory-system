@@ -39,11 +39,6 @@
             margin-bottom: 5px;
         }
 
-        .header p {
-            opacity: 0.9;
-            font-size: 0.9rem;
-        }
-
         .connection-status {
             padding: 10px;
             text-align: center;
@@ -54,41 +49,24 @@
         .status-connected {
             background: #d4edda;
             color: #155724;
-            border: 1px solid #c3e6cb;
         }
 
         .status-disconnected {
             background: #f8d7da;
             color: #721c24;
-            border: 1px solid #f5c6cb;
         }
 
         .status-loading {
             background: #fff3cd;
             color: #856404;
-            border: 1px solid #ffeaa7;
         }
 
-        .status-github {
-            background: #e2e3e5;
-            color: #383d41;
-            border: 1px solid #d6d8db;
-        }
-
-        .backend-config {
+        .api-config {
             background: #f8f9fa;
             padding: 15px;
             margin: 10px;
             border-radius: 8px;
-            border-left: 4px solid #007bff;
-        }
-
-        .config-input {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            display: none;
         }
 
         .tab-container {
@@ -117,20 +95,9 @@
             border-bottom: 3px solid #ee5a24;
         }
 
-        .tab:hover {
-            background: #e9ecef;
-        }
-
         .content {
             padding: 20px;
             min-height: 400px;
-        }
-
-        .add-item-form {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
         }
 
         .form-row {
@@ -138,10 +105,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 10px;
             margin-bottom: 15px;
-        }
-
-        .form-row.full {
-            grid-template-columns: 1fr;
         }
 
         .form-group {
@@ -153,7 +116,6 @@
             font-weight: bold;
             margin-bottom: 5px;
             color: #495057;
-            font-size: 0.9rem;
         }
 
         input, select {
@@ -161,12 +123,6 @@
             border: 2px solid #dee2e6;
             border-radius: 8px;
             font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        input:focus, select:focus {
-            outline: none;
-            border-color: #ee5a24;
         }
 
         .btn {
@@ -180,28 +136,8 @@
             text-align: center;
         }
 
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
         .btn-primary {
             background: linear-gradient(135deg, #ee5a24, #ff6b6b);
-            color: white;
-        }
-
-        .btn-primary:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(238, 90, 36, 0.4);
-        }
-
-        .btn-success {
-            background: linear-gradient(135deg, #00d2d3, #54a0ff);
-            color: white;
-        }
-
-        .btn-danger {
-            background: linear-gradient(135deg, #ff3838, #ff6b6b);
             color: white;
         }
 
@@ -219,14 +155,9 @@
             margin-top: 20px;
         }
 
-        .table-container {
-            overflow-x: auto;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.9rem;
         }
 
         th {
@@ -235,45 +166,19 @@
             padding: 12px 8px;
             text-align: center;
             font-weight: bold;
-            white-space: nowrap;
         }
 
         td {
             padding: 10px 8px;
             text-align: center;
             border-bottom: 1px solid #e9ecef;
-            vertical-align: middle;
-        }
-
-        tr:hover {
-            background: #f8f9fa;
         }
 
         .category-cell {
             background: #e9ecef;
-            font-size: 0.8rem;
             padding: 4px 8px;
             border-radius: 4px;
-        }
-
-        .category-หมู {
-            background: #ffe8e8;
-            color: #c92a2a;
-        }
-
-        .category-ทะเล {
-            background: #e3f2fd;
-            color: #1976d2;
-        }
-
-        .category-ของทานเล่น {
-            background: #e8f5e8;
-            color: #388e3c;
-        }
-
-        .category-น้ำจิ้ม {
-            background: #fff3e0;
-            color: #f57c00;
+            font-size: 0.8rem;
         }
 
         .stock-input {
@@ -284,140 +189,33 @@
             text-align: center;
         }
 
-        .stock-display {
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 4px;
-            min-width: 40px;
-        }
-
-        .stock-initial {
-            background: #e3f2fd;
-            color: #1976d2;
-        }
-
-        .stock-used {
-            background: #fff3e0;
-            color: #f57c00;
-        }
-
-        .stock-remaining {
-            background: #e8f5e8;
-            color: #388e3c;
-        }
-
-        .stock-remaining.low {
-            background: #ffebee;
-            color: #c62828;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 4px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
         .btn-icon {
             padding: 6px 8px;
             font-size: 0.8rem;
             border-radius: 4px;
             border: none;
             cursor: pointer;
-            transition: all 0.3s;
+            margin: 2px;
         }
 
-        .btn-edit {
-            background: #17a2b8;
-            color: white;
-        }
+        .btn-update { background: #28a745; color: white; }
+        .btn-edit { background: #17a2b8; color: white; }
+        .btn-reset { background: #6c757d; color: white; }
+        .btn-delete { background: #dc3545; color: white; }
 
-        .btn-delete {
-            background: #dc3545;
-            color: white;
-        }
-
-        .btn-reset {
-            background: #6c757d;
-            color: white;
-        }
-
-        .btn-update {
-            background: #28a745;
-            color: white;
-        }
-
-        .btn-icon:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
-
-        .table-summary {
-            background: #f8f9fa;
-            padding: 15px;
-            border-top: 2px solid #dee2e6;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            text-align: center;
-        }
-
-        .summary-item {
-            background: white;
-            padding: 10px;
-            border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .summary-value {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #ee5a24;
-        }
-
-        .summary-label {
-            font-size: 0.8rem;
-            color: #666;
-            margin-top: 4px;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 1000;
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 400px;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-
-        .daily-summary {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        .user-info {
+            background: #e3f2fd;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
         }
 
         .summary-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
-            margin-bottom: 15px;
+            margin: 20px 0;
         }
 
         .summary-card {
@@ -434,20 +232,6 @@
             color: #ee5a24;
         }
 
-        .summary-label {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        .user-info {
-            background: #e3f2fd;
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }
-
         @media (max-width: 768px) {
             .form-row {
                 grid-template-columns: 1fr;
@@ -456,24 +240,6 @@
             th, td {
                 padding: 8px 4px;
                 font-size: 0.8rem;
-            }
-            
-            .stock-input {
-                width: 50px;
-            }
-            
-            .action-buttons {
-                flex-direction: column;
-            }
-            
-            .btn-icon {
-                font-size: 0.7rem;
-                padding: 4px 6px;
-            }
-            
-            .tab {
-                font-size: 0.8rem;
-                padding: 12px 8px;
             }
         }
     </style>
@@ -485,43 +251,39 @@
             <p>ร้านหมูกระทะชั่งกิโล</p>
         </div>
 
-        <div id="connectionStatus" class="connection-status status-github">
-            🌐 โหมด GitHub Pages - ใช้ Local Storage
+        <div id="connectionStatus" class="connection-status status-loading">
+            🔄 กำลังเชื่อมต่อฐานข้อมูล...
         </div>
 
-        <div class="backend-config" id="backendConfig" style="display: none;">
-            <h4>🔧 ตั้งค่า Backend API</h4>
-            <p style="margin-bottom: 10px; font-size: 0.9rem;">หากคุณมี Backend Server สามารถกรอก URL ด้านล่าง:</p>
-            <input type="text" id="apiUrl" class="config-input" placeholder="http://localhost:3000/api" value="">
-            <div style="display: flex; gap: 10px; margin-top: 10px;">
-                <button class="btn btn-primary btn-small" onclick="connectToBackend()">เชื่อมต่อ Backend</button>
-                <button class="btn btn-small" onclick="toggleBackendConfig()">ซ่อน</button>
-            </div>
+        <div class="api-config" id="apiConfig">
+            <h4>ตั้งค่า API Server</h4>
+            <input type="text" id="apiUrl" placeholder="http://localhost:3000/api" style="width: 100%; margin: 10px 0;">
+            <button class="btn btn-primary btn-small" onclick="connectAPI()">เชื่อมต่อ</button>
+            <button class="btn btn-small" onclick="toggleApiConfig()">ยกเลิก</button>
         </div>
 
         <div class="tab-container">
             <button class="tab active" onclick="showTab('inventory')">📦 สต็อกสินค้า</button>
             <button class="tab" onclick="showTab('daily')">📊 สรุปรายวัน</button>
-            <button class="tab" onclick="showTab('report')">📋 รายงาน</button>
-            <button class="tab" onclick="showTab('settings')">⚙️ ตั้งค่า</button>
+            <button class="tab" onclick="showTab('reports')">📋 รายงาน</button>
         </div>
 
         <div class="content">
             <div class="user-info">
                 <strong>ผู้ใช้งาน:</strong> <span id="currentUser">ไม่ระบุ</span> | 
                 <strong>วันที่:</strong> <span id="currentDate"></span>
-                <button class="btn btn-small" onclick="changeUser()" style="margin-left: 10px;">เปลี่ยนผู้ใช้</button>
-                <button class="btn btn-small" onclick="clearLocalStorage()" style="margin-left: 5px; background: #dc3545; color: white;">ลบข้อมูลท้องถิ่น</button>
-                <button class="btn btn-small" onclick="toggleBackendConfig()" style="margin-left: 5px; background: #007bff; color: white;">ตั้งค่า Backend</button>
+                <button class="btn btn-small" onclick="changeUser()">เปลี่ยนผู้ใช้</button>
+                <button class="btn btn-small" onclick="toggleApiConfig()" style="background: #007bff; color: white;">ตั้งค่า API</button>
             </div>
 
+            <!-- สต็อกสินค้า -->
             <div id="inventory" class="tab-content active">
-                <div class="add-item-form">
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
                     <h3>เพิ่มสินค้าใหม่</h3>
                     <div class="form-row">
                         <div class="form-group">
                             <label>หมวดหมู่</label>
-                            <select id="newItemCategory">
+                            <select id="newCategory">
                                 <option value="หมู">🐷 หมู</option>
                                 <option value="ทะเล">🦐 ทะเล</option>
                                 <option value="ของทานเล่น">🥢 ของทานเล่น</option>
@@ -530,400 +292,486 @@
                         </div>
                         <div class="form-group">
                             <label>ชื่อสินค้า</label>
-                            <input type="text" id="newItemName" placeholder="ชื่อสินค้า">
+                            <input type="text" id="newName" placeholder="ชื่อสินค้า">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label>ราคา (บาท/กก.)</label>
-                            <input type="number" id="newItemPrice" placeholder="0">
+                            <input type="number" id="newPrice" placeholder="0">
                         </div>
                         <div class="form-group">
                             <label>สต็อกเริ่มต้น (กก.)</label>
-                            <input type="number" id="newItemStock" placeholder="0" step="0.1">
+                            <input type="number" id="newStock" placeholder="0" step="0.1">
                         </div>
                     </div>
-                    <button class="btn btn-primary" onclick="addItem()" style="width: 100%;" id="addItemBtn">เพิ่มสินค้า</button>
+                    <button class="btn btn-primary" onclick="addItem()" style="width: 100%;">เพิ่มสินค้า</button>
                 </div>
 
-                <div class="category-nav">
-                    <button class="btn btn-small" onclick="showCategory('หมู')">🐷 หมู</button>
-                    <button class="btn btn-small" onclick="showCategory('ทะเล')">🦐 ทะเล</button>
-                    <button class="btn btn-small" onclick="showCategory('ของทานเล่น')">🥢 ของทานเล่น</button>
-                    <button class="btn btn-small" onclick="showCategory('น้ำจิ้ม')">🥄 น้ำจิ้ม</button>
-                    <button class="btn btn-small" onclick="showCategory('all')">📋 ทั้งหมด</button>
-                </div>
-
-                <div id="itemsContainer" style="margin-top: 20px;"></div>
+                <div id="inventoryList"></div>
             </div>
 
+            <!-- สรุปรายวัน -->
             <div id="daily" class="tab-content" style="display: none;">
-                <div class="daily-summary">
-                    <h3>สรุปข้อมูลวันนี้</h3>
-                    <div class="summary-grid">
-                        <div class="summary-card">
-                            <div class="summary-number" id="totalItems">0</div>
-                            <div class="summary-label">รายการสินค้า</div>
-                        </div>
-                        <div class="summary-card">
-                            <div class="summary-number" id="totalValue">0</div>
-                            <div class="summary-label">มูลค่าคงเหลือ (บาท)</div>
-                        </div>
-                        <div class="summary-card">
-                            <div class="summary-number" id="usedValue">0</div>
-                            <div class="summary-label">มูลค่าที่ใช้ (บาท)</div>
-                        </div>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="summary-number" id="totalItems">0</div>
+                        <div>รายการสินค้า</div>
                     </div>
-                    <button class="btn btn-success" onclick="saveDailySummary()" style="width: 100%;" id="saveSummaryBtn">บันทึกสรุปประจำวัน</button>
-                </div>
-
-                <div class="inventory-table" style="margin-top: 20px;">
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>หมวดหมู่</th>
-                                    <th>ชื่อวัตถุดิบ</th>
-                                    <th>ราคา/กก.</th>
-                                    <th>เริ่มต้น</th>
-                                    <th>ใช้ไป</th>
-                                    <th>คงเหลือ</th>
-                                    <th>มูลค่าคงเหลือ</th>
-                                </tr>
-                            </thead>
-                            <tbody id="dailySummaryTableBody"></tbody>
-                        </table>
+                    <div class="summary-card">
+                        <div class="summary-number" id="totalValue">0</div>
+                        <div>มูลค่าคงเหลือ (บาท)</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-number" id="usedValue">0</div>
+                        <div>มูลค่าที่ใช้ (บาท)</div>
                     </div>
                 </div>
+                <button class="btn btn-primary" onclick="saveDailyReport()" style="width: 100%;">บันทึกสรุปประจำวัน</button>
+                <div id="dailyTable"></div>
             </div>
 
-            <div id="report" class="tab-content" style="display: none;">
+            <!-- รายงาน -->
+            <div id="reports" class="tab-content" style="display: none;">
                 <h3>รายงานประจำวัน</h3>
-                <div id="reportContainer"></div>
-                <button class="btn btn-primary" onclick="exportReport()" style="width: 100%; margin-top: 20px;">ส่งออกรายงาน</button>
-            </div>
-
-            <div id="settings" class="tab-content" style="display: none;">
-                <div class="daily-summary">
-                    <h3>⚙️ การตั้งค่าระบบ</h3>
-                    
-                    <h4 style="margin-top: 20px;">🔗 การเชื่อมต่อ Backend</h4>
-                    <div class="form-group" style="margin: 10px 0;">
-                        <label>Backend API URL:</label>
-                        <input type="text" id="settingsApiUrl" class="config-input" placeholder="http://localhost:3000/api">
-                    </div>
-                    <button class="btn btn-primary btn-small" onclick="saveSettings()">บันทึกการตั้งค่า</button>
-                    <button class="btn btn-success btn-small" onclick="testApiConnection()">ทดสอบการเชื่อมต่อ</button>
-                    
-                    <h4 style="margin-top: 20px;">📁 การจัดการข้อมูล</h4>
-                    <div style="margin: 10px 0;">
-                        <button class="btn btn-primary btn-small" onclick="exportData()">ส่งออกข้อมูลทั้งหมด</button>
-                        <button class="btn btn-success btn-small" onclick="importData()">นำเข้าข้อมูล</button>
-                        <input type="file" id="importFile" accept=".json" style="display: none;" onchange="handleFileImport(event)">
-                    </div>
-                    
-                    <h4 style="margin-top: 20px;">🗄️ สถานะข้อมูล</h4>
-                    <div id="dataStatus" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                        <p><strong>รายการสินค้า:</strong> <span id="statusItemCount">0</span> รายการ</p>
-                        <p><strong>รายงานประจำวัน:</strong> <span id="statusReportCount">0</span> รายงาน</p>
-                        <p><strong>อัพเดทล่าสุด:</strong> <span id="statusLastUpdate">ไม่ระบุ</span></p>
-                        <p><strong>โหมดการทำงาน:</strong> <span id="statusMode">Local Storage</span></p>
-                    </div>
-
-                    <h4 style="margin-top: 20px;">ℹ️ เกี่ยวกับระบบ</h4>
-                    <div style="background: #e7f3ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                        <p><strong>เวอร์ชัน:</strong> 2.0.0 (MySQL Integration)</p>
-                        <p><strong>โหมด:</strong> GitHub Pages Compatible</p>
-                        <p><strong>พัฒนาโดย:</strong> ระบบจัดการสต็อกสินค้า</p>
-                        <p style="margin-top: 10px; font-size: 0.9rem;">
-                            ระบบนี้รองรับการทำงานทั้งแบบ Local Storage (สำหรับ GitHub Pages) 
-                            และ MySQL Database (เมื่อมี Backend Server)
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <h3>แก้ไขสินค้า</h3>
-            <div class="form-group">
-                <label>ชื่อสินค้า</label>
-                <input type="text" id="editItemName">
-            </div>
-            <div class="form-group">
-                <label>ราคา (บาท/กก.)</label>
-                <input type="number" id="editItemPrice">
-            </div>
-            <div class="form-group">
-                <label>สต็อกเริ่มต้น (กก.)</label>
-                <input type="number" id="editItemStock" step="0.1">
-            </div>
-            <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <button class="btn btn-success" onclick="saveEdit()">บันทึก</button>
-                <button class="btn btn-danger" onclick="closeModal()">ยกเลิก</button>
+                <div id="reportsList"></div>
             </div>
         </div>
     </div>
 
     <script>
-        // Global variables
+        // Simple global variables
+        let API_URL = '';
         let inventory = [];
-        let dailyReports = [];
-        let currentUser = 'ไม่ระบุ';
-        let editingItemId = null;
-        let currentCategory = 'all';
-        let dbConnected = false;
-        let API_BASE_URL = '';
+        let currentUser = 'ผู้จัดการ';
+        let connected = false;
 
-        // Initialize app
+        // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            loadSettings();
             updateCurrentDate();
-            loadData();
+            loadSettings();
+            testConnection();
         });
 
-        // Settings management
+        // Settings
         function loadSettings() {
-            const savedApiUrl = localStorage.getItem('apiUrl');
-            if (savedApiUrl) {
-                API_BASE_URL = savedApiUrl;
-                document.getElementById('settingsApiUrl').value = savedApiUrl;
-                document.getElementById('apiUrl').value = savedApiUrl;
+            const saved = localStorage.getItem('apiUrl');
+            if (saved) {
+                API_URL = saved;
+                document.getElementById('apiUrl').value = saved;
+                testConnection();
             }
         }
 
-        function saveSettings() {
-            const apiUrl = document.getElementById('settingsApiUrl').value.trim();
-            if (apiUrl) {
-                API_BASE_URL = apiUrl;
-                localStorage.setItem('apiUrl', apiUrl);
-                document.getElementById('apiUrl').value = apiUrl;
-                alert('บันทึกการตั้งค่าเรียบร้อยแล้ว');
-                testApiConnection();
-            } else {
-                localStorage.removeItem('apiUrl');
-                API_BASE_URL = '';
-                updateConnectionStatus('github', 'โหมด GitHub Pages - ใช้ Local Storage');
-            }
-        }
-
-        function toggleBackendConfig() {
-            const config = document.getElementById('backendConfig');
+        function toggleApiConfig() {
+            const config = document.getElementById('apiConfig');
             config.style.display = config.style.display === 'none' ? 'block' : 'none';
         }
 
-        async function connectToBackend() {
-            const apiUrl = document.getElementById('apiUrl').value.trim();
-            if (!apiUrl) {
-                alert('กรุณาใส่ Backend API URL');
-                return;
-            }
-            
-            API_BASE_URL = apiUrl;
-            localStorage.setItem('apiUrl', apiUrl);
-            document.getElementById('settingsApiUrl').value = apiUrl;
-            
-            const success = await testConnection();
-            if (success) {
-                toggleBackendConfig();
-                loadData();
+        function connectAPI() {
+            const url = document.getElementById('apiUrl').value.trim();
+            if (url) {
+                API_URL = url;
+                localStorage.setItem('apiUrl', url);
+                testConnection();
+                toggleApiConfig();
             }
         }
 
-        // Connection status management
-        function updateConnectionStatus(status, message) {
+        // Connection
+        async function testConnection() {
+            if (!API_URL) {
+                updateStatus('disconnected', 'ไม่ได้เชื่อมต่อ API - ใช้งานแบบออฟไลน์');
+                loadLocalData();
+                return;
+            }
+
+            updateStatus('loading', 'กำลังทดสอบการเชื่อมต่อ...');
+            
+            try {
+                const response = await fetch(`${API_URL}/test-connection`);
+                if (response.ok) {
+                    updateStatus('connected', 'เชื่อมต่อฐานข้อมูลสำเร็จ');
+                    connected = true;
+                    loadData();
+                } else {
+                    throw new Error('Connection failed');
+                }
+            } catch (error) {
+                updateStatus('disconnected', 'เชื่อมต่อไม่สำเร็จ - ใช้งานแบบออฟไลน์');
+                connected = false;
+                loadLocalData();
+            }
+        }
+
+        function updateStatus(status, message) {
             const statusEl = document.getElementById('connectionStatus');
             statusEl.className = `connection-status status-${status}`;
             
-            const icons = {
-                connected: '✅',
-                disconnected: '❌',
-                loading: '🔄',
-                github: '🌐'
-            };
-            
+            const icons = { connected: '✅', disconnected: '❌', loading: '🔄' };
             statusEl.textContent = `${icons[status]} ${message}`;
-            dbConnected = (status === 'connected');
-            
-            updateStatusDisplay();
         }
 
-        function updateStatusDisplay() {
-            const statusMode = document.getElementById('statusMode');
-            if (statusMode) {
-                statusMode.textContent = dbConnected ? 'MySQL Database' : 'Local Storage';
-            }
-        }
-
-        // Test database connection
-        async function testConnection() {
-            if (!API_BASE_URL) {
-                updateConnectionStatus('github', 'โหมด GitHub Pages - ใช้ Local Storage');
-                return false;
-            }
-
-            updateConnectionStatus('loading', 'กำลังทดสอบการเชื่อมต่อ...');
-            
-            try {
-                const response = await fetch(`${API_BASE_URL}/test-connection`, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    updateConnectionStatus('connected', 'เชื่อมต่อฐานข้อมูลสำเร็จ');
-                    return true;
-                } else {
-                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                }
-            } catch (error) {
-                console.error('Connection test failed:', error);
-                updateConnectionStatus('disconnected', `เชื่อมต่อฐานข้อมูลไม่สำเร็จ: ${error.message}`);
-                return false;
-            }
-        }
-
-        async function testApiConnection() {
-            await testConnection();
-        }
-
-        // MySQL API Functions
-        async function saveToMySQL(data) {
-            if (!dbConnected || !API_BASE_URL) {
-                saveToLocalStorage(data);
-                return false;
+        // Data loading
+        async function loadData() {
+            if (!connected) {
+                loadLocalData();
+                return;
             }
 
             try {
-                const inventoryResponse = await fetch(`${API_BASE_URL}/inventory/sync`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        items: inventory,
-                        user: currentUser
-                    })
-                });
-
-                if (!inventoryResponse.ok) {
-                    throw new Error(`Inventory sync failed: ${inventoryResponse.statusText}`);
-                }
-
-                console.log('✅ Data synced to MySQL successfully');
-                
-                saveToLocalStorage(data);
-                return true;
-                
-            } catch (error) {
-                console.error('❌ MySQL save failed:', error);
-                updateConnectionStatus('disconnected', `บันทึกข้อมูลไม่สำเร็จ: ${error.message}`);
-                
-                saveToLocalStorage(data);
-                return false;
-            }
-        }
-
-        async function loadFromMySQL() {
-            if (!dbConnected || !API_BASE_URL) {
-                return loadFromLocalStorage();
-            }
-
-            try {
-                const response = await fetch(`${API_BASE_URL}/inventory`, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error(`Load failed: ${response.statusText}`);
-                }
-
+                const response = await fetch(`${API_URL}/inventory`);
                 const data = await response.json();
                 
-                if (data.items && Array.isArray(data.items)) {
+                if (data.success && data.items) {
                     inventory = data.items.map(item => ({
                         id: item.id,
                         category: item.category,
                         name: item.name,
-                        price: parseFloat(item.price),
-                        initialStock: parseFloat(item.initial_stock),
-                        usedStock: parseFloat(item.used_stock),
-                        remainingStock: parseFloat(item.remaining_stock),
-                        createdBy: item.created_by,
-                        createdDate: item.created_date
+                        price: item.price,
+                        initialStock: item.initial_stock,
+                        usedStock: item.used_stock,
+                        remainingStock: item.remaining_stock
                     }));
                     
-                    console.log('✅ Data loaded from MySQL:', inventory.length, 'items');
-                    
-                    saveToLocalStorage({
-                        inventory: inventory,
-                        dailyReports: dailyReports,
-                        currentUser: currentUser
+                    saveLocalData();
+                    displayData();
+                }
+            } catch (error) {
+                console.error('Load error:', error);
+                loadLocalData();
+            }
+        }
+
+        function loadLocalData() {
+            const saved = localStorage.getItem('inventoryData');
+            if (saved) {
+                const data = JSON.parse(saved);
+                inventory = data.inventory || [];
+                currentUser = data.currentUser || 'ผู้จัดการ';
+            } else {
+                // Sample data
+                inventory = [
+                    { id: 1, category: 'หมู', name: 'หมูสามชั้น', price: 280, initialStock: 5, usedStock: 1.5, remainingStock: 3.5 },
+                    { id: 2, category: 'ทะเล', name: 'กุ้งขาว', price: 350, initialStock: 2, usedStock: 0.5, remainingStock: 1.5 }
+                ];
+            }
+            displayData();
+        }
+
+        function saveLocalData() {
+            localStorage.setItem('inventoryData', JSON.stringify({
+                inventory: inventory,
+                currentUser: currentUser,
+                lastUpdate: new Date().toISOString()
+            }));
+        }
+
+        // Display functions
+        function displayData() {
+            displayInventory();
+            displaySummary();
+            document.getElementById('currentUser').textContent = currentUser;
+        }
+
+        function displayInventory() {
+            const container = document.getElementById('inventoryList');
+            
+            if (inventory.length === 0) {
+                container.innerHTML = '<p>ไม่มีสินค้า</p>';
+                return;
+            }
+
+            const html = `
+                <div class="inventory-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>หมวดหมู่</th>
+                                <th>ชื่อสินค้า</th>
+                                <th>ราคา/กก.</th>
+                                <th>เริ่มต้น</th>
+                                <th>ใช้ไป</th>
+                                <th>คงเหลือ</th>
+                                <th>ระบุการใช้</th>
+                                <th>จัดการ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${inventory.map(item => `
+                                <tr>
+                                    <td><span class="category-cell">${getCategoryIcon(item.category)} ${item.category}</span></td>
+                                    <td style="text-align: left; font-weight: bold;">${item.name}</td>
+                                    <td style="color: #e74c3c; font-weight: bold;">${item.price.toLocaleString()}</td>
+                                    <td>${item.initialStock}</td>
+                                    <td>${item.usedStock}</td>
+                                    <td>${item.remainingStock}</td>
+                                    <td>
+                                        <input type="number" id="usage-${item.id}" class="stock-input" 
+                                               value="${item.usedStock}" step="0.1">
+                                        <button class="btn-icon btn-update" onclick="updateUsage(${item.id})">✓</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn-icon btn-reset" onclick="resetStock(${item.id})">🔄</button>
+                                        <button class="btn-icon btn-delete" onclick="deleteItem(${item.id})">🗑️</button>
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        function displaySummary() {
+            const totalItems = inventory.length;
+            const totalValue = inventory.reduce((sum, item) => sum + (item.remainingStock * item.price), 0);
+            const usedValue = inventory.reduce((sum, item) => sum + (item.usedStock * item.price), 0);
+
+            document.getElementById('totalItems').textContent = totalItems;
+            document.getElementById('totalValue').textContent = totalValue.toLocaleString();
+            document.getElementById('usedValue').textContent = usedValue.toLocaleString();
+
+            // Display daily table
+            const dailyHtml = `
+                <div class="inventory-table" style="margin-top: 20px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>หมวดหมู่</th>
+                                <th>ชื่อสินค้า</th>
+                                <th>ราคา</th>
+                                <th>เริ่มต้น</th>
+                                <th>ใช้ไป</th>
+                                <th>คงเหลือ</th>
+                                <th>มูลค่าคงเหลือ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${inventory.map(item => `
+                                <tr>
+                                    <td><span class="category-cell">${getCategoryIcon(item.category)} ${item.category}</span></td>
+                                    <td style="text-align: left;">${item.name}</td>
+                                    <td>${item.price.toLocaleString()}</td>
+                                    <td>${item.initialStock}</td>
+                                    <td>${item.usedStock}</td>
+                                    <td>${item.remainingStock}</td>
+                                    <td style="color: #28a745; font-weight: bold;">${(item.remainingStock * item.price).toLocaleString()}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            document.getElementById('dailyTable').innerHTML = dailyHtml;
+        }
+
+        function getCategoryIcon(category) {
+            const icons = {
+                'หมู': '🐷',
+                'ทะเล': '🦐', 
+                'ของทานเล่น': '🥢',
+                'น้ำจิ้ม': '🥄'
+            };
+            return icons[category] || '📦';
+        }
+
+        // Item operations
+        async function addItem() {
+            const category = document.getElementById('newCategory').value;
+            const name = document.getElementById('newName').value.trim();
+            const price = parseFloat(document.getElementById('newPrice').value) || 0;
+            const stock = parseFloat(document.getElementById('newStock').value) || 0;
+
+            if (!name) {
+                alert('กรุณาใส่ชื่อสินค้า');
+                return;
+            }
+
+            const newItem = {
+                id: Date.now(),
+                category: category,
+                name: name,
+                price: price,
+                initialStock: stock,
+                usedStock: 0,
+                remainingStock: stock
+            };
+
+            if (connected) {
+                try {
+                    const response = await fetch(`${API_URL}/inventory/item`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            category: category,
+                            name: name,
+                            price: price,
+                            initial_stock: stock,
+                            created_by: currentUser
+                        })
                     });
-                    
-                    return true;
-                } else {
-                    console.log('No data found in MySQL, using local storage');
-                    return loadFromLocalStorage();
+
+                    if (response.ok) {
+                        loadData();
+                        clearForm();
+                        alert('เพิ่มสินค้าเรียบร้อยแล้ว');
+                        return;
+                    }
+                } catch (error) {
+                    console.error('Add item error:', error);
                 }
-                
-            } catch (error) {
-                console.error('❌ MySQL load failed:', error);
-                updateConnectionStatus('disconnected', `โหลดข้อมูลไม่สำเร็จ: ${error.message}`);
-                
-                return loadFromLocalStorage();
             }
+
+            // Fallback to local storage
+            inventory.push(newItem);
+            saveLocalData();
+            displayData();
+            clearForm();
+            alert('เพิ่มสินค้าเรียบร้อยแล้ว (บันทึกในเครื่อง)');
         }
 
-        async function saveDailyReportToMySQL(reportData) {
-            if (!dbConnected || !API_BASE_URL) {
-                console.warn('Database not connected, cannot save daily report to MySQL');
-                return false;
+        async function updateUsage(id) {
+            const item = inventory.find(i => i.id == id);
+            const input = document.getElementById(`usage-${id}`);
+            const usedAmount = parseFloat(input.value) || 0;
+
+            if (usedAmount < 0 || usedAmount > item.initialStock) {
+                alert('จำนวนที่ใช้ไม่ถูกต้อง');
+                input.value = item.usedStock;
+                return;
             }
 
-            try {
-                const response = await fetch(`${API_BASE_URL}/daily-reports`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        date: reportData.date,
-                        user: reportData.user,
-                        totalItems: reportData.totalItems,
-                        totalValue: reportData.totalValue,
-                        usedValue: reportData.usedValue,
-                        items: reportData.items
-                    })
-                });
+            if (connected) {
+                try {
+                    const response = await fetch(`${API_URL}/inventory/item/${id}/usage`, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ used_stock: usedAmount })
+                    });
 
-                if (!response.ok) {
-                    throw new Error(`Daily report save failed: ${response.statusText}`);
+                    if (response.ok) {
+                        loadData();
+                        return;
+                    }
+                } catch (error) {
+                    console.error('Update usage error:', error);
                 }
-
-                console.log('✅ Daily report saved to MySQL');
-                return true;
-                
-            } catch (error) {
-                console.error('❌ MySQL daily report save failed:', error);
-                return false;
             }
+
+            // Fallback to local storage
+            item.usedStock = usedAmount;
+            item.remainingStock = item.initialStock - usedAmount;
+            saveLocalData();
+            displayData();
         }
 
-        // User management
+        async function resetStock(id) {
+            if (!confirm('ต้องการรีเซ็ตสต็อกหรือไม่?')) return;
+
+            if (connected) {
+                try {
+                    const response = await fetch(`${API_URL}/inventory/item/${id}/reset`, {
+                        method: 'PUT'
+                    });
+
+                    if (response.ok) {
+                        loadData();
+                        alert('รีเซ็ตสต็อกเรียบร้อยแล้ว');
+                        return;
+                    }
+                } catch (error) {
+                    console.error('Reset stock error:', error);
+                }
+            }
+
+            // Fallback to local storage
+            const item = inventory.find(i => i.id == id);
+            item.usedStock = 0;
+            item.remainingStock = item.initialStock;
+            saveLocalData();
+            displayData();
+            alert('รีเซ็ตสต็อกเรียบร้อยแล้ว');
+        }
+
+        async function deleteItem(id) {
+            if (!confirm('ต้องการลบสินค้านี้หรือไม่?')) return;
+
+            if (connected) {
+                try {
+                    const response = await fetch(`${API_URL}/inventory/item/${id}`, {
+                        method: 'DELETE'
+                    });
+
+                    if (response.ok) {
+                        loadData();
+                        alert('ลบสินค้าเรียบร้อยแล้ว');
+                        return;
+                    }
+                } catch (error) {
+                    console.error('Delete item error:', error);
+                }
+            }
+
+            // Fallback to local storage
+            inventory = inventory.filter(i => i.id != id);
+            saveLocalData();
+            displayData();
+            alert('ลบสินค้าเรียบร้อยแล้ว');
+        }
+
+        async function saveDailyReport() {
+            const today = new Date().toISOString().split('T')[0];
+            const totalValue = inventory.reduce((sum, item) => sum + (item.remainingStock * item.price), 0);
+            const usedValue = inventory.reduce((sum, item) => sum + (item.usedStock * item.price), 0);
+            const initialValue = inventory.reduce((sum, item) => sum + (item.initialStock * item.price), 0);
+
+            const reportData = {
+                date: today,
+                user: currentUser,
+                totalItems: inventory.length,
+                totalValue: totalValue,
+                usedValue: usedValue,
+                initialValue: initialValue,
+                items: inventory
+            };
+
+            if (connected) {
+                try {
+                    const response = await fetch(`${API_URL}/daily-reports`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(reportData)
+                    });
+
+                    if (response.ok) {
+                        alert('บันทึกสรุปประจำวันเรียบร้อยแล้ว (ฐานข้อมูล)');
+                        return;
+                    }
+                } catch (error) {
+                    console.error('Save report error:', error);
+                }
+            }
+
+            alert('บันทึกสรุปประจำวันเรียบร้อยแล้ว (ในเครื่อง)');
+        }
+
+        // Helper functions
+        function clearForm() {
+            document.getElementById('newName').value = '';
+            document.getElementById('newPrice').value = '';
+            document.getElementById('newStock').value = '';
+        }
+
         function changeUser() {
             const userName = prompt('กรุณาใส่ชื่อผู้ใช้งาน:');
             if (userName && userName.trim()) {
                 currentUser = userName.trim();
-                document.getElementById('currentUser').textContent = currentUser;
-                saveData();
+                saveLocalData();
+                displayData();
             }
         }
 
@@ -937,18 +785,6 @@
             document.getElementById('currentDate').textContent = dateStr;
         }
 
-        function clearLocalStorage() {
-            if (confirm('คุณแน่ใจหรือไม่ที่ต้องการลบข้อมูลท้องถิ่นทั้งหมด? การกระทำนี้ไม่สามารถย้อนกลับได้')) {
-                localStorage.clear();
-                inventory = [];
-                dailyReports = [];
-                currentUser = 'ไม่ระบุ';
-                alert('ข้อมูลท้องถิ่นถูกลบแล้ว (ข้อมูลในฐานข้อมูลยังคงอยู่)');
-                location.reload();
-            }
-        }
-
-        // Tab management
         function showTab(tabName) {
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
@@ -957,775 +793,9 @@
             document.getElementById(tabName).style.display = 'block';
             
             if (tabName === 'daily') {
-                updateDailySummary();
-                updateDailySummaryTable();
-            } else if (tabName === 'report') {
-                displayReports();
-            } else if (tabName === 'settings') {
-                updateSettingsTab();
+                displaySummary();
             }
         }
-
-        function updateSettingsTab() {
-            document.getElementById('statusItemCount').textContent = inventory.length;
-            document.getElementById('statusReportCount').textContent = dailyReports.length;
-            
-            const lastUpdate = localStorage.getItem('lastUpdate');
-            if (lastUpdate) {
-                document.getElementById('statusLastUpdate').textContent = new Date(lastUpdate).toLocaleString('th-TH');
-            }
-        }
-
-        // Category management
-        function showCategory(category) {
-            currentCategory = category;
-            displayItems();
-        }
-
-        // Item management
-        async function addItem() {
-            const category = document.getElementById('newItemCategory').value;
-            const name = document.getElementById('newItemName').value;
-            const price = parseFloat(document.getElementById('newItemPrice').value) || 0;
-            const stock = parseFloat(document.getElementById('newItemStock').value) || 0;
-
-            if (!name.trim()) {
-                alert('กรุณาใส่ชื่อสินค้า');
-                return;
-            }
-
-            const newItem = {
-                id: Date.now(),
-                category: category,
-                name: name.trim(),
-                price: price,
-                initialStock: stock,
-                usedStock: 0,
-                remainingStock: stock,
-                createdBy: currentUser,
-                createdDate: new Date().toISOString()
-            };
-
-            inventory.push(newItem);
-            
-            document.getElementById('newItemName').value = '';
-            document.getElementById('newItemPrice').value = '';
-            document.getElementById('newItemStock').value = '';
-
-            const success = await saveData();
-            displayItems();
-            
-            if (dbConnected && success) {
-                alert('เพิ่มสินค้าเรียบร้อยแล้ว (บันทึกในฐานข้อมูล)');
-            } else {
-                alert('เพิ่มสินค้าเรียบร้อยแล้ว (บันทึกในเครื่อง)');
-            }
-        }
-
-        function editItem(id) {
-            const item = inventory.find(i => i.id === id);
-            if (!item) return;
-
-            editingItemId = id;
-            document.getElementById('editItemName').value = item.name;
-            document.getElementById('editItemPrice').value = item.price;
-            document.getElementById('editItemStock').value = item.initialStock;
-            document.getElementById('editModal').style.display = 'block';
-        }
-
-        async function saveEdit() {
-            if (!editingItemId) return;
-
-            const item = inventory.find(i => i.id === editingItemId);
-            if (!item) return;
-
-            const newName = document.getElementById('editItemName').value;
-            const newPrice = parseFloat(document.getElementById('editItemPrice').value) || 0;
-            const newStock = parseFloat(document.getElementById('editItemStock').value) || 0;
-
-            if (!newName.trim()) {
-                alert('กรุณาใส่ชื่อสินค้า');
-                return;
-            }
-
-            item.name = newName.trim();
-            item.price = newPrice;
-            item.initialStock = newStock;
-            item.remainingStock = newStock - item.usedStock;
-            if (item.remainingStock < 0) item.remainingStock = 0;
-
-            closeModal();
-            
-            const success = await saveData();
-            displayItems();
-            
-            if (dbConnected && success) {
-                alert('แก้ไขสินค้าเรียบร้อยแล้ว (บันทึกในฐานข้อมูล)');
-            } else {
-                alert('แก้ไขสินค้าเรียบร้อยแล้ว (บันทึกในเครื่อง)');
-            }
-        }
-
-        async function deleteItem(id) {
-            if (confirm('ต้องการลบสินค้านี้หรือไม่?')) {
-                inventory = inventory.filter(i => i.id !== id);
-                
-                const success = await saveData();
-                displayItems();
-                
-                if (dbConnected && success) {
-                    alert('ลบสินค้าเรียบร้อยแล้ว (อัพเดทฐานข้อมูล)');
-                } else {
-                    alert('ลบสินค้าเรียบร้อยแล้ว (บันทึกในเครื่อง)');
-                }
-            }
-        }
-
-        async function updateUsage(id) {
-            const item = inventory.find(i => i.id === id);
-            if (!item) return;
-
-            const usageInput = document.getElementById(`usage-${id}`);
-            const usedAmount = parseFloat(usageInput.value) || 0;
-            
-            if (usedAmount < 0) {
-                alert('จำนวนที่ใช้ต้องไม่ติดลบ');
-                usageInput.value = item.usedStock;
-                return;
-            }
-
-            if (usedAmount > item.initialStock) {
-                alert('จำนวนที่ใช้ไม่สามารถมากกว่าสต็อกเริ่มต้นได้');
-                usageInput.value = item.usedStock;
-                return;
-            }
-
-            item.usedStock = usedAmount;
-            item.remainingStock = item.initialStock - usedAmount;
-
-            await saveData();
-            displayItems();
-        }
-
-        async function resetStock(id) {
-            if (confirm('ต้องการรีเซ็ตสต็อกสินค้านี้หรือไม่?')) {
-                const item = inventory.find(i => i.id === id);
-                if (item) {
-                    item.usedStock = 0;
-                    item.remainingStock = item.initialStock;
-                    
-                    const success = await saveData();
-                    displayItems();
-                    
-                    if (dbConnected && success) {
-                        alert('รีเซ็ตสต็อกเรียบร้อยแล้ว (อัพเดทฐานข้อมูล)');
-                    } else {
-                        alert('รีเซ็ตสต็อกเรียบร้อยแล้ว (บันทึกในเครื่อง)');
-                    }
-                }
-            }
-        }
-
-        function closeModal() {
-            document.getElementById('editModal').style.display = 'none';
-            editingItemId = null;
-        }
-
-        // Display functions
-        function displayItems() {
-            const container = document.getElementById('itemsContainer');
-            let filteredItems = inventory;
-
-            if (currentCategory !== 'all') {
-                filteredItems = inventory.filter(item => item.category === currentCategory);
-            }
-
-            if (filteredItems.length === 0) {
-                container.innerHTML = '<p style="text-align: center; color: #666; padding: 40px;">ไม่มีสินค้าในหมวดนี้</p>';
-                return;
-            }
-
-            const totalValue = filteredItems.reduce((sum, item) => sum + (item.remainingStock * item.price), 0);
-            const usedValue = filteredItems.reduce((sum, item) => sum + (item.usedStock * item.price), 0);
-            const totalInitial = filteredItems.reduce((sum, item) => sum + (item.initialStock * item.price), 0);
-
-            const html = `
-                <div class="inventory-table">
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>หมวดหมู่</th>
-                                    <th>ชื่อวัตถุดิบ</th>
-                                    <th>ราคา/กก.</th>
-                                    <th>จำนวนที่มี</th>
-                                    <th>ใช้ไป</th>
-                                    <th>คงเหลือ</th>
-                                    <th>ระบุการใช้</th>
-                                    <th>จัดการ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${filteredItems.map(item => `
-                                    <tr>
-                                        <td>
-                                            <span class="category-cell category-${item.category}">
-                                                ${getCategoryIcon(item.category)} ${item.category}
-                                            </span>
-                                        </td>
-                                        <td style="text-align: left; font-weight: bold;">${item.name}</td>
-                                        <td style="color: #e74c3c; font-weight: bold;">${item.price.toLocaleString()}</td>
-                                        <td>
-                                            <span class="stock-display stock-initial">${item.initialStock}</span>
-                                        </td>
-                                        <td>
-                                            <span class="stock-display stock-used">${item.usedStock}</span>
-                                        </td>
-                                        <td>
-                                            <span class="stock-display stock-remaining ${item.remainingStock <= 0.5 && item.remainingStock > 0 ? 'low' : (item.remainingStock === 0 ? 'low' : '')}">${item.remainingStock}</span>
-                                        </td>
-                                        <td>
-                                            <div style="display: flex; gap: 4px; align-items: center; justify-content: center;">
-                                                <input type="number" id="usage-${item.id}" class="stock-input" 
-                                                       placeholder="0" step="0.1" value="${item.usedStock}">
-                                                <button class="btn-icon btn-update" onclick="updateUsage(${item.id})" title="อัพเดท">✓</button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="action-buttons">
-                                                <button class="btn-icon btn-edit" onclick="editItem(${item.id})" title="แก้ไข">✏️</button>
-                                                <button class="btn-icon btn-reset" onclick="resetStock(${item.id})" title="รีเซ็ต">🔄</button>
-                                                <button class="btn-icon btn-delete" onclick="deleteItem(${item.id})" title="ลบ">🗑️</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                `).join('')}
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="table-summary">
-                        <div class="summary-item">
-                            <div class="summary-value">${filteredItems.length}</div>
-                            <div class="summary-label">รายการทั้งหมด</div>
-                        </div>
-                        <div class="summary-item">
-                            <div class="summary-value">${totalInitial.toLocaleString()}</div>
-                            <div class="summary-label">มูลค่าเริ่มต้น (บาท)</div>
-                        </div>
-                        <div class="summary-item">
-                            <div class="summary-value">${usedValue.toLocaleString()}</div>
-                            <div class="summary-label">มูลค่าที่ใช้ (บาท)</div>
-                        </div>
-                        <div class="summary-item">
-                            <div class="summary-value">${totalValue.toLocaleString()}</div>
-                            <div class="summary-label">มูลค่าคงเหลือ (บาท)</div>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            container.innerHTML = html;
-        }
-
-        function getCategoryIcon(category) {
-            const icons = {
-                'หมู': '🐷',
-                'ทะเล': '🦐',
-                'ของทานเล่น': '🥢',
-                'น้ำจิ้ม': '🥄'
-            };
-            return icons[category] || '📦';
-        }
-
-        // Daily summary functions
-        function updateDailySummary() {
-            const totalItems = inventory.length;
-            const totalValue = inventory.reduce((sum, item) => sum + (item.remainingStock * item.price), 0);
-            const usedValue = inventory.reduce((sum, item) => sum + (item.usedStock * item.price), 0);
-
-            document.getElementById('totalItems').textContent = totalItems.toLocaleString();
-            document.getElementById('totalValue').textContent = totalValue.toLocaleString();
-            document.getElementById('usedValue').textContent = usedValue.toLocaleString();
-            
-            updateDailySummaryTable();
-        }
-
-        function updateDailySummaryTable() {
-            const tbody = document.getElementById('dailySummaryTableBody');
-            if (!tbody) return;
-            
-            const html = inventory.map(item => {
-                const itemValue = item.remainingStock * item.price;
-                return `
-                    <tr>
-                        <td>
-                            <span class="category-cell category-${item.category}">
-                                ${getCategoryIcon(item.category)} ${item.category}
-                            </span>
-                        </td>
-                        <td style="text-align: left; font-weight: bold;">${item.name}</td>
-                        <td style="color: #e74c3c; font-weight: bold;">${item.price.toLocaleString()}</td>
-                        <td>
-                            <span class="stock-display stock-initial">${item.initialStock}</span>
-                        </td>
-                        <td>
-                            <span class="stock-display stock-used">${item.usedStock}</span>
-                        </td>
-                        <td>
-                            <span class="stock-display stock-remaining ${item.remainingStock <= 0.5 && item.remainingStock > 0 ? 'low' : (item.remainingStock === 0 ? 'low' : '')}">${item.remainingStock}</span>
-                        </td>
-                        <td style="color: #28a745; font-weight: bold;">${itemValue.toLocaleString()}</td>
-                    </tr>
-                `;
-            }).join('');
-            
-            tbody.innerHTML = html;
-        }
-
-        async function saveDailySummary() {
-            const today = new Date().toISOString().split('T')[0];
-            const existingReportIndex = dailyReports.findIndex(r => r.date === today);
-
-            const summary = {
-                date: today,
-                user: currentUser,
-                totalItems: inventory.length,
-                totalValue: inventory.reduce((sum, item) => sum + (item.remainingStock * item.price), 0),
-                usedValue: inventory.reduce((sum, item) => sum + (item.usedStock * item.price), 0),
-                items: inventory.map(item => ({ 
-                    id: item.id,
-                    name: item.name,
-                    category: item.category,
-                    price: item.price,
-                    initialStock: item.initialStock,
-                    usedStock: item.usedStock,
-                    remainingStock: item.remainingStock
-                })),
-                timestamp: new Date().toISOString()
-            };
-
-            if (existingReportIndex !== -1) {
-                dailyReports[existingReportIndex] = summary;
-            } else {
-                dailyReports.push(summary);
-            }
-
-            let success = false;
-            if (dbConnected) {
-                success = await saveDailyReportToMySQL(summary);
-            }
-
-            saveToLocalStorage({
-                inventory: inventory,
-                dailyReports: dailyReports,
-                currentUser: currentUser
-            });
-
-            if (dbConnected && success) {
-                alert('บันทึกสรุปประจำวันเรียบร้อยแล้ว (ฐานข้อมูล)');
-            } else {
-                alert('บันทึกสรุปประจำวันเรียบร้อยแล้ว (ในเครื่อง)');
-            }
-
-            displayReports();
-        }
-
-        // Report functions
-        function displayReports() {
-            const container = document.getElementById('reportContainer');
-            
-            if (dailyReports.length === 0) {
-                container.innerHTML = '<p style="text-align: center; color: #666; padding: 40px;">ไม่มีรายงาน</p>';
-                return;
-            }
-
-            const sortedReports = [...dailyReports].sort((a, b) => new Date(b.date) - new Date(a.date));
-            
-            const html = sortedReports.map(report => `
-                <div class="item-card" style="margin-bottom: 15px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                    <div class="item-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                        <div class="item-name" style="font-weight: bold; font-size: 1.1rem;">รายงานวันที่ ${new Date(report.date).toLocaleDateString('th-TH')}</div>
-                        <div class="item-price" style="font-size: 0.9rem; color: #666;">โดย: ${report.user}</div>
-                    </div>
-                    <div class="item-stock" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; text-align: center;">
-                        <div class="stock-info initial">
-                            <div style="font-weight: bold; color: #ee5a24;">${report.totalItems}</div>
-                            <div style="font-size: 0.8rem; color: #495057;">รายการสินค้า</div>
-                        </div>
-                        <div class="stock-info used">
-                            <div style="font-weight: bold; color: #f57c00;">${report.usedValue.toLocaleString()}</div>
-                            <div style="font-size: 0.8rem; color: #495057;">มูลค่าที่ใช้</div>
-                        </div>
-                        <div class="stock-info remaining">
-                            <div style="font-weight: bold; color: #388e3c;">${report.totalValue.toLocaleString()}</div>
-                            <div style="font-size: 0.8rem; color: #495057;">มูลค่าคงเหลือ</div>
-                        </div>
-                    </div>
-                    <div style="margin-top: 15px; text-align: center;">
-                         <button class="btn btn-small btn-info" onclick="viewDailyReportDetails('${report.date}')">ดูรายละเอียด</button>
-                    </div>
-                </div>
-            `).join('');
-
-            container.innerHTML = html;
-        }
-
-        function viewDailyReportDetails(date) {
-            const report = dailyReports.find(r => r.date === date);
-            if (!report) {
-                alert('ไม่พบรายงานสำหรับวันที่นี้');
-                return;
-            }
-
-            let detailsHtml = `
-                <h4>รายละเอียดรายงานวันที่ ${new Date(report.date).toLocaleDateString('th-TH')}</h4>
-                <p><strong>ผู้บันทึก:</strong> ${report.user}</p>
-                <p><strong>บันทึกเมื่อ:</strong> ${new Date(report.timestamp).toLocaleString('th-TH')}</p>
-                <p><strong>สรุป:</strong></p>
-                <ul>
-                    <li>รายการสินค้าทั้งหมด: ${report.totalItems}</li>
-                    <li>มูลค่าคงเหลือรวม: ${report.totalValue.toLocaleString()} บาท</li>
-                    <li>มูลค่าที่ใช้ไปรวม: ${report.usedValue.toLocaleString()} บาท</li>
-                </ul>
-                <h5 style="margin-top: 15px;">รายละเอียดสินค้า:</h5>
-                <div class="inventory-table">
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>หมวดหมู่</th>
-                                    <th>ชื่อวัตถุดิบ</th>
-                                    <th>ราคา/กก.</th>
-                                    <th>เริ่มต้น</th>
-                                    <th>ใช้ไป</th>
-                                    <th>คงเหลือ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${report.items.map(item => `
-                                    <tr>
-                                        <td>
-                                            <span class="category-cell category-${item.category}">
-                                                ${getCategoryIcon(item.category)} ${item.category}
-                                            </span>
-                                        </td>
-                                        <td style="text-align: left;">${item.name}</td>
-                                        <td>${item.price.toLocaleString()}</td>
-                                        <td>${item.initialStock}</td>
-                                        <td>${item.usedStock}</td>
-                                        <td>${item.remainingStock}</td>
-                                    </tr>
-                                `).join('')}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <button class="btn btn-danger" onclick="closeModal()" style="margin-top: 15px;">ปิด</button>
-            `;
-
-            const modal = document.getElementById('editModal');
-            const modalContent = modal.querySelector('.modal-content');
-            
-            modalContent.dataset.originalHtml = modalContent.innerHTML; 
-            modalContent.innerHTML = detailsHtml;
-            modal.style.display = 'block';
-        }
-
-        const originalCloseModal = closeModal;
-        closeModal = function() {
-            const modal = document.getElementById('editModal');
-            const modalContent = modal.querySelector('.modal-content');
-            if (modalContent.dataset.originalHtml) {
-                modalContent.innerHTML = modalContent.dataset.originalHtml;
-                delete modalContent.dataset.originalHtml;
-            }
-            originalCloseModal();
-        };
-
-        function exportReport() {
-            if (dailyReports.length === 0) {
-                alert('ไม่มีข้อมูลรายงานให้ส่งออก');
-                return;
-            }
-
-            const csvContent = generateCSV();
-            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement('a');
-            const url = URL.createObjectURL(blob);
-            link.setAttribute('href', url);
-            link.setAttribute('download', `รายงานสต็อก_${new Date().toISOString().split('T')[0]}.csv`);
-            link.style.visibility = 'hidden';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        function generateCSV() {
-            let csv = 'วันที่,ผู้บันทึก,จำนวนสินค้า,มูลค่าคงเหลือ,มูลค่าที่ใช้\n';
-            
-            dailyReports.forEach(report => {
-                csv += `${new Date(report.date).toLocaleDateString('th-TH')},${report.user},${report.totalItems},${report.totalValue},${report.usedValue}\n`;
-            });
-            
-            return csv;
-        }
-
-        // Data management functions
-        function exportData() {
-            const dataToExport = {
-                inventory: inventory,
-                dailyReports: dailyReports,
-                currentUser: currentUser,
-                exportDate: new Date().toISOString(),
-                version: '2.0.0'
-            };
-
-            const dataStr = JSON.stringify(dataToExport, null, 2);
-            const blob = new Blob([dataStr], { type: 'application/json' });
-            const link = document.createElement('a');
-            const url = URL.createObjectURL(blob);
-            link.setAttribute('href', url);
-            link.setAttribute('download', `inventory_backup_${new Date().toISOString().split('T')[0]}.json`);
-            link.style.visibility = 'hidden';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        function importData() {
-            document.getElementById('importFile').click();
-        }
-
-        function handleFileImport(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                try {
-                    const importedData = JSON.parse(e.target.result);
-                    
-                    if (importedData.inventory && Array.isArray(importedData.inventory)) {
-                        if (confirm('ต้องการนำเข้าข้อมูลหรือไม่? ข้อมูลปัจจุบันจะถูกแทนที่')) {
-                            inventory = importedData.inventory;
-                            dailyReports = importedData.dailyReports || [];
-                            currentUser = importedData.currentUser || 'ไม่ระบุ';
-                            
-                            document.getElementById('currentUser').textContent = currentUser;
-                            
-                            saveData();
-                            displayItems();
-                            updateDailySummary();
-                            displayReports();
-                            
-                            alert(`นำเข้าข้อมูลเรียบร้อยแล้ว: ${inventory.length} รายการสินค้า, ${dailyReports.length} รายงาน`);
-                        }
-                    } else {
-                        alert('ไฟล์ข้อมูลไม่ถูกต้อง');
-                    }
-                } catch (error) {
-                    alert('เกิดข้อผิดพลาดในการอ่านไฟล์: ' + error.message);
-                }
-            };
-            reader.readAsText(file);
-            
-            // Reset file input
-            event.target.value = '';
-        }
-
-        // Data persistence functions
-        function saveToLocalStorage(dataToSave) {
-            try {
-                dataToSave.lastUpdate = new Date().toISOString();
-                localStorage.setItem('inventoryData', JSON.stringify(dataToSave));
-                localStorage.setItem('lastUpdate', dataToSave.lastUpdate);
-                console.log('💾 Data saved to local storage.');
-            } catch (e) {
-                console.error('Error saving to local storage:', e);
-            }
-        }
-
-        function loadFromLocalStorage() {
-            try {
-                const storedData = localStorage.getItem('inventoryData');
-                if (storedData) {
-                    const parsedData = JSON.parse(storedData);
-                    console.log('✅ Data loaded from local storage.');
-                    return parsedData;
-                }
-                console.log('Local storage empty or no inventory data found.');
-                return null;
-            } catch (e) {
-                console.error('Error loading from local storage:', e);
-                return null;
-            }
-        }
-
-        async function saveData() {
-            const dataToSave = {
-                inventory: inventory,
-                dailyReports: dailyReports,
-                currentUser: currentUser,
-                lastUpdated: new Date().toISOString()
-            };
-
-            if (dbConnected && API_BASE_URL) {
-                return await saveToMySQL(dataToSave);
-            } else {
-                saveToLocalStorage(dataToSave);
-                return true; // Always return true for local storage
-            }
-        }
-
-        async function loadData() {
-            console.log('=== Starting data load process ===');
-            
-            if (API_BASE_URL) {
-                const connected = await testConnection();
-                
-                if (connected) {
-                    const success = await loadFromMySQL();
-                    if (!success) {
-                        console.log('⚠️ MySQL loading failed, checking local storage...');
-                        const localData = loadFromLocalStorage();
-                        if (localData && localData.inventory) {
-                            inventory = localData.inventory;
-                            dailyReports = localData.dailyReports || [];
-                            currentUser = localData.currentUser || 'ไม่ระบุ';
-                            console.log('✅ Loaded data from local storage.');
-                        } else {
-                            console.log('⚠️ Local storage also empty, using sample data.');
-                            loadSampleData();
-                        }
-                    }
-                } else {
-                    console.log('⚠️ Database connection failed, checking local storage...');
-                    const localData = loadFromLocalStorage();
-                    if (localData && localData.inventory) {
-                        inventory = localData.inventory;
-                        dailyReports = localData.dailyReports || [];
-                        currentUser = localData.currentUser || 'ไม่ระบุ';
-                        console.log('✅ Loaded data from local storage.');
-                    } else {
-                        console.log('⚠️ Local storage also empty, using sample data.');
-                        loadSampleData();
-                    }
-                }
-            } else {
-                // No API URL configured, use local storage only
-                const localData = loadFromLocalStorage();
-                if (localData && localData.inventory) {
-                    inventory = localData.inventory;
-                    dailyReports = localData.dailyReports || [];
-                    currentUser = localData.currentUser || 'ไม่ระบุ';
-                    console.log('✅ Loaded data from local storage (GitHub Pages mode).');
-                } else {
-                    console.log('⚠️ Local storage empty, using sample data.');
-                    loadSampleData();
-                }
-            }
-            
-            document.getElementById('currentUser').textContent = currentUser;
-            displayItems();
-            updateDailySummary();
-            displayReports();
-        }
-
-        function loadSampleData() {
-            if (inventory.length === 0) {
-                inventory = [
-                    {
-                        id: 1,
-                        category: 'หมู',
-                        name: 'หมูสามชั้น',
-                        price: 280,
-                        initialStock: 5.0,
-                        usedStock: 1.5,
-                        remainingStock: 3.5,
-                        createdBy: 'ผู้จัดการ',
-                        createdDate: new Date().toISOString()
-                    },
-                    {
-                        id: 2,
-                        category: 'ทะเล',
-                        name: 'กุ้งขาว',
-                        price: 350,
-                        initialStock: 2.0,
-                        usedStock: 0.5,
-                        remainingStock: 1.5,
-                        createdBy: 'ผู้จัดการ',
-                        createdDate: new Date().toISOString()
-                    },
-                    {
-                        id: 3,
-                        category: 'ของทานเล่น',
-                        name: 'ลูกชิ้นปลา',
-                        price: 120,
-                        initialStock: 1.0,
-                        usedStock: 0.2,
-                        remainingStock: 0.8,
-                        createdBy: 'ผู้จัดการ',
-                        createdDate: new Date().toISOString()
-                    },
-                    {
-                        id: 4,
-                        category: 'น้ำจิ้ม',
-                        name: 'น้ำจิ้มรสเปรี้ยว',
-                        price: 80,
-                        initialStock: 0.5,
-                        usedStock: 0.1,
-                        remainingStock: 0.4,
-                        createdBy: 'ผู้จัดการ',
-                        createdDate: new Date().toISOString()
-                    }
-                ];
-                console.log('Sample data loaded.');
-                
-                // Save sample data to local storage
-                saveToLocalStorage({
-                    inventory: inventory,
-                    dailyReports: dailyReports,
-                    currentUser: currentUser
-                });
-            }
-        }
-
-        // Event listeners
-        window.onclick = function(event) {
-            const modal = document.getElementById('editModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        }
-
-        document.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter' && event.target.tagName === 'INPUT') {
-                event.preventDefault();
-                
-                if (event.target.id.startsWith('usage-')) {
-                    const itemId = event.target.id.split('-')[1];
-                    updateUsage(parseInt(itemId));
-                } else if (event.target.closest('.add-item-form')) {
-                    addItem();
-                } else if (event.target.closest('.modal-content')) {
-                    if (event.target.id === 'editItemName' || event.target.id === 'editItemPrice' || event.target.id === 'editItemStock') {
-                        saveEdit();
-                    }
-                } else if (event.target.id === 'settingsApiUrl') {
-                    saveSettings();
-                } else if (event.target.id === 'apiUrl') {
-                    connectToBackend();
-                }
-            }
-        });
-
-        // Auto-save every 5 minutes
-        setInterval(function() {
-            if (inventory.length > 0) {
-                saveData();
-                console.log('Auto-saved data');
-            }
-        }, 5 * 60 * 1000); // 5 minutes
     </script>
 </body>
 </html>
